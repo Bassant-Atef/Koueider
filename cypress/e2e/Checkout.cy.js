@@ -66,7 +66,7 @@
     cy.get('[class="wc_payment_methods payment_methods methods"]').should('be.visible');
     cy.get('[id="payment_method_cod"]').check({force: true});
     cy.get('[id="terms"]').check({force: true});
-    cy.get('[id="place_order"]').click();
+    cy.get('[id="place_order"]').click({force: true});
     cy.wait(2000).url().should('include', 'checkout/order-received');
 
     });
